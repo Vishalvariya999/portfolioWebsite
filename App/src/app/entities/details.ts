@@ -1,5 +1,5 @@
 export const ResumeLink =
-  'https://drive.google.com/file/d/1xQrGQSIwr7OTMKSxWbxSN9-ri9Ca82H6/view?usp=drive_link';
+  'https://drive.google.com/file/d/14Yz34hw5nAPRvdak0fJXMWAz-aneBd0N/view?usp=sharing';
 
 export const DateOfBirth = '2003, 2, 10';
 export const DateOfJoin = '2022, 9';
