@@ -1,0 +1,280 @@
+<header id="header-wrap">
+  <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+          aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <span class="icon-menu"></span>
+          <span class="icon-menu"></span>
+          <span class="icon-menu"></span>
+        </button>
+        <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
+          <li class="nav-item active">
+            <a class="nav-link" href="#hero-area">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">
+              Skills
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">
+              Resume
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Start -->
+    <ul class="onepage-nev mobile-menu">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#services">Skills</a>
+      </li>
+      <li>
+        <a href="#resume">Resume</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+    <!-- Mobile Menu End -->
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Area Start -->
+  <div id="hero-area" class="hero-area-bg">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 text-center">
+          <div class="contents">
+            <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
+            <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">{{details.firstName + ' ' + details.lastName}}
+            </h2>
+            <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Fullstack Web Developer</p>
+            <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
+              <ng-container *ngFor="let socialMediaLink of socialMediaLinks">
+                <li>
+                  <a [class]="socialMediaLink.class" [href]="socialMediaLink.url" target="_blank"><i
+                      [class]="socialMediaLink.icon"></i></a>
+                </li>
+              </ng-container>
+            </ul>
+            <div class="header-button wow fadeInUp" data-wow-delay="1s">
+              <a [href]="resumeLink" target="_blank" class="btn btn-common">Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
+          <img class="img-fluid" src="assets/img/profile.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+          <h3>Hi Guys!</h3>
+          <p>You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.</p>
+          <div class="about-profile">
+            <ul class="admin-profile">
+              <li><span class="pro-title"> Name </span> <span class="pro-detail">{{details.firstName + ' ' +
+                  details.lastName}}</span></li>
+              <li><span class="pro-title"> Birth Date </span> <span class="pro-detail">{{details.dateOfBirth}}</span>
+              </li>
+              <li><span class="pro-title"> Age </span> <span class="pro-detail">{{details.age}} Years</span></li>
+              <li><span class="pro-title"> Experience </span> <span class="pro-detail">{{details.experience}}
+                  Years</span></li>
+              <li><span class="pro-title"> Country </span> <span class="pro-detail">{{details.country}}</span></li>
+              <li><span class="pro-title"> Location </span> <span class="pro-detail">{{details.location}}</span></li>
+              <li><span class="pro-title"> e-mail </span> <span class="pro-detail">{{details.email}}</span></li>
+              <li><span class="pro-title"> Phone </span> <span class="pro-detail">{{details.mobileNumber}}</span></li>
+              <li><span class="pro-title"> Freelance </span> <span class="pro-detail">Available</span></li>
+            </ul>
+          </div>
+          <a [href]="resumeLink" target="_blank" class="btn btn-common"><i class="icon-paper-clip"></i> Download
+            Resume</a>
+          <a href="tel:+919924769731" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services section-padding">
+  <h2 class="section-title wow flipInX" data-wow-delay="0.4s">Skills</h2>
+  <div class="container">
+    <ng-container *ngFor="let skill of skills">
+      <div class="subheading timelin-title mb-3">
+        <span>{{ skill.name }}</span>
+      </div>
+      <ul class="list-inline list-icons mb-4">
+        <li class="list-inline-item mr-25" *ngFor="let icon of skill.list">
+          <i [class]="icon"></i>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</section>
+
+<div id="resume" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="education wow fadeInRight" data-wow-delay="0.3s">
+          <ul class="timeline">
+            <li>
+              <i class="icon-graduation"></i>
+              <h2 class="timelin-title">Education</h2>
+            </li>
+            <ng-container *ngFor="let education of educations">
+              <li>
+                <div class="content-text">
+                  <h3 class="line-title">{{education.classCourse}} ({{education.schoolCollege}})</h3>
+                  <span>{{education.year}}</span>
+                  <p class="line-text mb-1">{{education.favSub}}</p>
+                  <p class="line-text">{{education.gradeMarksPer}}</p>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="experience wow fadeInRight" data-wow-delay="0.6s">
+          <ul class="timeline">
+            <li>
+              <i class="icon-briefcase"></i>
+              <h2 class="timelin-title">Experience</h2>
+            </li>
+            <ng-container *ngFor="let experience of experiences">
+              <li>
+                <div class="content-text">
+                  <h3 class="line-title">{{experience.title}} - {{experience.company}}</h3>
+                  <span>{{experience.timePeriod}}</span>
+                  <p class="line-text">{{experience.description}}</p>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="counter-section section-padding">
+  <div class="container">
+    <div class="row">
+      <!-- Counter Item -->
+      <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+        <div class="counter wow fadeInDown" data-wow-delay="0.3s">
+          <div class="icon"><i class="icon-briefcase"></i></div>
+          <div class="counterUp">5</div>
+          <p>Project Working</p>
+        </div>
+      </div>
+      <!-- Counter Item -->
+      <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+        <div class="counter wow fadeInDown" data-wow-delay="0.6s">
+          <div class="icon"><i class="icon-check"></i></div>
+          <div class="counterUp">10</div>
+          <p>Project Done</p>
+        </div>
+      </div>
+      <!-- Counter Item -->
+      <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+        <div class="counter wow fadeInDown" data-wow-delay="0.9s">
+          <div class="icon"><i class="icon-diamond"></i></div>
+          <div class="counterUp">1</div>
+          <p>Awards Received</p>
+        </div>
+      </div>
+      <!-- Counter Item -->
+      <div class="col-md-3 col-sm-6 work-counter-widget text-center">
+        <div class="counter wow fadeInDown" data-wow-delay="1.2s">
+          <div class="icon"><i class="icon-heart"></i></div>
+          <div class="counterUp">10</div>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-padding">
+  <div class="contact-form">
+    <div class="container">
+      <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+        <div class="col-md-6 col-lg-6 col-sm-12">
+          <div class="footer-right-area wow fadeIn">
+            <h2>Contact Address</h2>
+            <div class="footer-right-contact">
+              <ng-container *ngFor="let contactInfo of contactInfos">
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i [class]="contactInfo.icon"></i>
+                  </div>
+                  <p>{{contactInfo.value}}</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+          <ul class="social-icon">
+            <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
+              <ng-container *ngFor="let socialMediaLink of socialMediaLinks">
+                <li>
+                  <a [class]="socialMediaLink.class" [href]="socialMediaLink.url" target="_blank"><i
+                      [class]="socialMediaLink.icon"></i></a>
+                </li>
+              </ng-container>
+            </ul>
+          </ul>
+          <p>Copyright © {{currentYear}} UIdeck All Right Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="#" class="back-to-top">
+  <i class="icon-arrow-up"></i>
+</a>

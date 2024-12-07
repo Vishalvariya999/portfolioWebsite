@@ -1,0 +1,29 @@
+.subheading {
+    font-weight: 500;
+    font-size: 1.35rem;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline-item {
+    display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 5px;
+}
+
+.list-icons {
+    font-size: 3rem;
+}
+
+.list-icons .list-inline-item i:hover {
+    color: #00b4d9;
+}
+
+.mr-25 {
+    margin-right: 25px !important;
+}
